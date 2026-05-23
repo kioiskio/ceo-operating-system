@@ -25,9 +25,17 @@ Thanks for contributing. This project has a clear standard: **every submission m
 
 ### For Frameworks
 
-- Use Mermaid diagrams for decision trees where applicable.
+- Primary location: `references/` (used by Agent Skill).
+- Legacy: `frameworks/` redirects to `references/`.
 - Include: trigger condition → decision criteria → recommended action → next steps.
-- Tag the applicable company stage(s).
+- Tag applicable company stage(s).
+
+### For Agent Skill changes
+
+- Update `SKILL.md` for triggers and hard rules only.
+- Playbooks live in `references/*.md`.
+- Tool wiring in `references/tool-invocation.md`.
+- Bump `VERSION` and `references/changelog.md`.
 
 ### For Templates
 

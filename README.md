@@ -2,64 +2,67 @@
 
 > The founder's second brain. Not another bookmark folder.
 
-**CEO Operating System** is a collection of opinionated, immediately usable tools, decision frameworks, and templates for startup founders. Unlike link-aggregation lists, every piece here is designed to be *run*, not *read*.
+**Agent Skill + runnable tools** for fundraising, SaaS metrics, cap table modeling, and pitch deck readiness.
 
-## What's Inside
+**Related:** [clinical-skills](https://github.com/kimogrant/clinical-skills) · [allergos](https://github.com/kimogrant/allergos) · [Web3 bounty PoC](https://github.com/kimogrant/web3-bounty-poc-report-skill) · [EVM audit](https://github.com/kimogrant/evm-audit-skill)
 
-| Category | What You Get |
-|----------|---------------|
-| **Tools** | Runnable scripts that solve concrete problems (equity math, SaaS health checks, pitch deck scoring) |
-| **Frameworks** | Decision trees and playbooks for high-stakes founder decisions |
-| **Templates** | Ready-to-use documents, agendas, and outlines you can copy into your workflow |
+English | [简体中文](./README.zh.md)
 
-## Quick Start
+---
+
+## Install as Agent Skill (recommended)
 
 ```bash
-# Clone and run any tool
-git clone https://github.com/<your-username>/ceo-operating-system.git
+git clone https://github.com/kimogrant/ceo-operating-system.git
 cd ceo-operating-system
-
-# Example: Check your SaaS business health
-python tools/saas-metrics/saas_health.py
-
-# Example: Model your equity dilution
-python tools/equity-calculator/equity_calc.py
-
-# Example: Score your pitch deck readiness
-python tools/pitch-deck-scorer/scorer.py
+chmod +x skill.sh
+./skill.sh install /path/to/your/project
 ```
 
-## Tools
+Installs to `.cursor/skills/ceo-operating-system/` (`SKILL.md`, `references/`, `tools/`, `templates/`).
 
-### [Equity Dilution Calculator](tools/equity-calculator/)
-Model how fundraising rounds dilute founder ownership. Simulate multiple rounds, option pools, and see your cap table evolve.
+Reload Cursor → **`/ceo-operating-system`**
 
-### [SaaS Metrics Health Checker](tools/saas-metrics/)
-Plug in your ARR, churn, CAC, and burn rate. Get a health score, red/amber/green indicators, and actionable recommendations.
+## Run tools directly
 
-### [Pitch Deck Scorer](tools/pitch-deck-scorer/)
-Interactive self-assessment checklist. Rate every slide against best practices. See exactly what's missing before you send to investors.
+```bash
+python tools/saas-metrics/saas_health.py -e
+python tools/equity-calculator/equity_calc.py -e
+python tools/pitch-deck-scorer/scorer.py -e
+python tools/pitch-deck-scorer/scorer.py --export   # JSON output
+```
 
-## Frameworks
+## What's inside
 
-- [Fundraising Decision Tree](frameworks/fundraising/decision-tree.md) — Should you raise? How much? From whom? When?
-- [Product-Market Fit Framework](frameworks/product-market-fit/pmf-framework.md) — A structured approach to measuring and achieving PMF.
+| Category | Contents |
+|----------|----------|
+| **Skill** | `SKILL.md` — triggers, hard rules, module index |
+| **References** | Fundraising, PMF, tool invocation, templates index |
+| **Tools** | SaaS health, equity dilution, pitch deck scorer (stdlib) |
+| **Templates** | Pitch deck outline, 1:1 agenda |
+| **Frameworks** | Legacy copy; canonical playbooks in `references/` |
 
-## Templates
+## Agent behavior
 
-- [Pitch Deck Outline](templates/pitch-deck-outline.md) — Slide-by-slide structure tested on 500+ funded decks.
-- [1-on-1 Meeting Agenda](templates/one-on-one-agenda.md) — A repeatable template for effective founder-to-report conversations.
+1. Classify intent (fundraise / PMF / dilution / deck).
+2. Load matching `references/*.md`.
+3. **Run Python tools when user supplies numbers** — see [references/tool-invocation.md](references/tool-invocation.md).
+
+## Tests
+
+```bash
+python -m unittest tests/test_tools.py -v
+```
 
 ## Philosophy
 
-- **Runnable over readable.** Every tool produces output, not just explanation.
-- **Opinionated over exhaustive.** We curate the one framework that works, not ten that conflict.
-- **Stage-aware.** Resources are tagged by company stage (pre-seed → growth) so you only see what applies to you now.
-- **Self-contained.** No external dependencies on paywalled articles or dead links.
+- **Runnable over readable** — scripts produce scores and tables.
+- **Opinionated over exhaustive** — one framework that works.
+- **Stage-aware** — note when VC SaaS benchmarks don't apply.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome tools, frameworks, and templates that are immediately usable and opinionated.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
