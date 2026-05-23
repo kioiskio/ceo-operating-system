@@ -1,0 +1,6 @@
+# CEO Operating System has no external dependencies.
+# All tools use only the Python standard library.
+#
+# If you add a tool that requires packages, list them here:
+# pandas>=2.0
+# rich>=13.0
