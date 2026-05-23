@@ -7,6 +7,7 @@ red/amber/green indicators and actionable recommendations.
 Usage:
     python saas_health.py              # Interactive mode
     python saas_health.py --example    # Run with example data
+    python saas_health.py -e           # Short form of --example
 """
 
 from __future__ import annotations
@@ -240,7 +241,7 @@ def _parse_nonnegative(msg: str) -> float:
     while True:
         val = _parse_numeric(msg)
         if val < 0:
-            print(f"  Value cannot be negative. Please try again.")
+            print(f"  Value cannot be negative. Please enter a non-negative number.")
             continue
         return val
 

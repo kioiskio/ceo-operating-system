@@ -9,6 +9,7 @@ Usage:
     python scorer.py              # Interactive mode
     python scorer.py --example    # Run with example responses
     python scorer.py --export     # Export results to JSON file after scoring
+    python scorer.py -e           # Short form of --example
 """
 
 from __future__ import annotations

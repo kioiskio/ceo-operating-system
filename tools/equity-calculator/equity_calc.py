@@ -7,6 +7,7 @@ Includes option pool expansion and cap table visualization.
 Usage:
     python equity_calc.py              # Interactive mode
     python equity_calc.py --example    # Run with example data
+    python equity_calc.py -e           # Short form of --example
 """
 
 from __future__ import annotations
@@ -188,13 +189,16 @@ def interactive_mode() -> None:
             print("  Founder ownership cannot exceed 100%. Please try again.")
             continue
         if founder_pct == 0:
-            print("  Founder ownership cannot be 0%. Please enter a positive number.")
+            print("  Founder ownership must be greater than 0. Please try again.")
             continue
         break
     founder_shares = initial * (founder_pct / 100)
 
     rounds: list[Round] = []
-    num_rounds = int(_parse_nonnegative("Number of funding rounds to model: "))
+    num_rounds_raw = _parse_nonnegative("Number of funding rounds to model: ")
+    num_rounds = int(num_rounds_raw)
+    if num_rounds_raw != num_rounds:
+        print(f"  Rounding {num_rounds_raw:.1f} to {num_rounds}. Please enter a whole number.")
 
     for i in range(num_rounds):
         print(f"\n--- Round {i + 1} ---")
