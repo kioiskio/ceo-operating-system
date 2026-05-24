@@ -2,8 +2,6 @@
 
 **Agent Skill + 可运行 Python 工具**：SaaS 健康分、股权稀释、路演评分 + 融资/PMF 框架。
 
-**系列：** [clinical-skills](https://github.com/kimogrant/clinical-skills) · [allergos](https://github.com/kimogrant/allergos) · **本仓库** · [Web3 赏金](https://github.com/kimogrant/web3-bounty-poc-report-skill) · [EVM 审计](https://github.com/kimogrant/evm-audit-skill)
-
 ---
 
 ## 安装（Cursor Agent Skill）

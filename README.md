@@ -4,8 +4,6 @@
 
 **Agent Skill + runnable tools** for fundraising, SaaS metrics, cap table modeling, and pitch deck readiness.
 
-**Related:** [clinical-skills](https://github.com/kimogrant/clinical-skills) · [allergos](https://github.com/kimogrant/allergos) · [Web3 bounty PoC](https://github.com/kimogrant/web3-bounty-poc-report-skill) · [EVM audit](https://github.com/kimogrant/evm-audit-skill)
-
 English | [简体中文](./README.zh.md)
 
 ---
