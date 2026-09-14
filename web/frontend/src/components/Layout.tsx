@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import {
+	Badge,
 	Button,
 	Drawer,
 	Grid,
 	Layout as AntdLayout,
 	Menu,
 	Segmented,
-	Tag,
 	Tooltip,
 } from 'antd';
 import {
 	AuditOutlined,
 	DashboardOutlined,
+	DesktopOutlined,
 	FileTextOutlined,
 	HistoryOutlined,
 	LineChartOutlined,
@@ -122,10 +123,11 @@ export function Layout() {
 								: 'LLM not configured — go to Settings'
 						}
 					>
-						<Link to="/settings">
-							<Tag color={llmReady ? 'success' : 'default'} style={{ marginInlineEnd: 0 }}>
-								{llmReady ? 'LLM Connected' : 'LLM Not Configured'}
-							</Tag>
+						<Link to="/settings" style={{ display: 'inline-flex', alignItems: 'center' }}>
+							<Badge
+								status={llmReady ? 'success' : 'default'}
+								text={llmReady ? 'LLM Connected' : 'LLM Not Configured'}
+							/>
 						</Link>
 					</Tooltip>
 					<Segmented<ThemeMode>
@@ -135,7 +137,7 @@ export function Layout() {
 						options={[
 							{ value: 'light', icon: <SunOutlined />, title: 'Light' },
 							{ value: 'dark', icon: <MoonOutlined />, title: 'Dark' },
-							{ value: 'system', label: 'System' },
+							{ value: 'system', icon: <DesktopOutlined />, title: 'System' },
 						]}
 					/>
 				</AntdLayout.Header>

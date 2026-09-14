@@ -56,6 +56,7 @@ export default function Dashboard() {
 				{TOOLS.map((t) => (
 					<Col key={t.to} xs={24} md={8}>
 						<Card
+							style={{ height: '100%' }}
 							title={
 								<span>
 									{t.icon} {t.title}
