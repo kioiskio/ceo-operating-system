@@ -10,7 +10,7 @@ description: >-
 license: MIT
 metadata:
   version: "1.1.0"
-  author: "kimogrant"
+  author: "kioiskio"
   display_name: "CEO Operating System"
   tags: "founder, startup, fundraising, saas, cap-table, pitch-deck, pmf"
   language: en
@@ -20,7 +20,7 @@ metadata:
 
 > Runnable founder tools + decision frameworks · Not a bookmark list  
 > Compatible with Cursor · Claude Code · Codex · OpenCode · Gemini CLI  
-> Sibling skills: [clinical-skills](https://github.com/kimogrant/clinical-skills) · [allergos](https://github.com/kimogrant/allergos)
+> Sibling skills: [clinical-skills](https://github.com/kioiskio/clinical-skills) · [allergos](https://github.com/kioiskio/allergos)
 
 **Progressive disclosure:** Load one `references/` file per task. Read [references/tool-invocation.md](references/tool-invocation.md) before running scripts.
 

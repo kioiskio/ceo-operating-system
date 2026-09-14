@@ -11,7 +11,7 @@ English | [简体中文](./README.zh.md)
 ## Install as Agent Skill (recommended)
 
 ```bash
-git clone https://github.com/kimogrant/ceo-operating-system.git
+git clone https://github.com/kioiskio/ceo-operating-system.git
 cd ceo-operating-system
 chmod +x skill.sh
 ./skill.sh install /path/to/your/project
