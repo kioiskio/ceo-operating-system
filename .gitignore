@@ -23,3 +23,7 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# Web app runtime
+web/backend/data/
+.pytest_cache/

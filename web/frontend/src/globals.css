@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+body {
+	font-family:
+		'Inter Variable', 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei',
+		'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Minimal markdown reading-area styles; table/code colors follow the theme (.dark on <html>) */
+:root {
+	--md-border: #e5e7eb;
+	--md-code-bg: rgb(0 0 0 / 0.05);
+	--md-table-head-bg: rgb(0 0 0 / 0.02);
+}
+
+.dark {
+	--md-border: #303030;
+	--md-code-bg: rgb(255 255 255 / 0.08);
+	--md-table-head-bg: rgb(255 255 255 / 0.04);
+}
+
+.md-body {
+	font-size: 14px;
+	line-height: 1.75;
+}
+
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4 {
+	margin: 1.3em 0 0.6em;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.md-body h1 {
+	font-size: 1.4em;
+}
+
+.md-body h2 {
+	font-size: 1.2em;
+	padding-bottom: 0.35em;
+	border-bottom: 1px solid var(--md-border);
+}
+
+.md-body h3 {
+	font-size: 1.05em;
+}
+
+.md-body p,
+.md-body ul,
+.md-body ol {
+	margin: 0.6em 0;
+}
+
+.md-body ul,
+.md-body ol {
+	padding-left: 1.5em;
+}
+
+.md-body blockquote {
+	margin: 0.8em 0;
+	padding: 0.2em 0 0.2em 1em;
+	border-left: 3px solid var(--md-border);
+	opacity: 0.85;
+}
+
+.md-body code {
+	background: var(--md-code-bg);
+	border-radius: 4px;
+	padding: 0.1em 0.4em;
+	font-size: 0.88em;
+}
+
+.md-body pre {
+	background: var(--md-code-bg);
+	border-radius: 6px;
+	padding: 1em;
+	overflow-x: auto;
+	margin: 0.8em 0;
+}
+
+.md-body pre code {
+	background: transparent;
+	padding: 0;
+}
+
+.md-body table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1em 0;
+	font-size: 0.92em;
+}
+
+.md-body th,
+.md-body td {
+	border: 1px solid var(--md-border);
+	padding: 0.5em 0.9em;
+	text-align: left;
+}
+
+.md-body th {
+	background: var(--md-table-head-bg);
+	font-weight: 600;
+}
+
+.md-body hr {
+	border: none;
+	border-top: 1px solid var(--md-border);
+	margin: 1.4em 0;
+}
+
+.mermaid-box svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}

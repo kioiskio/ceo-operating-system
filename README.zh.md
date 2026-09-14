@@ -29,6 +29,20 @@ python tools/pitch-deck-scorer/scorer.py -e      # 路演 checklist 评分
 
 ---
 
+## Web 应用
+
+完整的 Web 界面在 [`web/`](web/README.md)（FastAPI + React + Ant Design）：三个工具的可视化操作、用户自配置 LLM 分析（OpenAI 兼容接口）、运行历史、亮/暗主题。
+
+```bash
+cd web/frontend && npm install && npm run build
+cd ../backend && pip install -r requirements.txt
+python -m app.main    # → http://localhost:8000
+```
+
+详见 [web/README.md](web/README.md)。
+
+---
+
 ## Agent 硬规则
 
 - 有数字 → **跑脚本**，禁止心算稀释或健康分  

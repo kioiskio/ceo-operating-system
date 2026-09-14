@@ -30,6 +30,18 @@ python tools/pitch-deck-scorer/scorer.py -e
 python tools/pitch-deck-scorer/scorer.py --export   # JSON output
 ```
 
+## Web App
+
+A full web UI for these tools lives in [`web/`](web/README.md) — FastAPI + React + Ant Design, with visual dashboards for all three tools, user-configurable LLM analysis (any OpenAI-compatible endpoint), local run history, and light/dark themes.
+
+```bash
+cd web/frontend && npm install && npm run build
+cd ../backend && pip install -r requirements.txt
+python -m app.main    # → http://localhost:8000
+```
+
+See [web/README.md](web/README.md) for details.
+
 ## What's inside
 
 | Category | Contents |
@@ -39,6 +51,7 @@ python tools/pitch-deck-scorer/scorer.py --export   # JSON output
 | **Tools** | SaaS health, equity dilution, pitch deck scorer (stdlib) |
 | **Templates** | Pitch deck outline, 1:1 agenda |
 | **Frameworks** | Legacy copy; canonical playbooks in `references/` |
+| **Web app** | `web/` — FastAPI + React UI for the tools ([docs](web/README.md)) |
 
 ## Agent behavior
 
